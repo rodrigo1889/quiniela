@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd 
 import matplotlib.pyplot as plt 
 
-plt.style.use("style.mplstyle")
+        
 
 class Weekly:
 	def __init__(self,df1: pd.DataFrame, df2: pd.DataFrame, dfactual: pd.DataFrame):
@@ -51,11 +51,30 @@ class Weekly:
 		plt.scatter(self.actual.T[name].index,self.actual.T[name].cumsum(),color=color,edgecolor='black',zorder=1,label="Actual")
 
 
-
-
-class Positions:
-	def __init__(self):
-		self.data = pd.DataFrame(pd.read_csv("pos_actual.csv"))
-
-
-	
+class Color_Picker:
+    def __init__(self, name:str):
+        self.name = name
+    
+    def pick(self):
+    	if self.name == "Rodrigo":
+    		return "lime"
+    	if self.name == "Angel":
+    		return "darkviolet"
+    	if self.name == "Juvs":
+    		return "dimgray"
+    	if self.name == "Fer":
+    		return "darkgoldenrod"
+    	if self.name == "Pao":
+    		return "cornflowerblue"
+    	if self.name == "Gabrielito":
+    		return "yellow"
+    	if self.name == "Mickey":
+    		return "teal"
+    	if self.name == "Liz":
+    		return "hotpink"
+    	if self.name == "Lety":
+    		return "maroon"
+    	if self.name == "Juan-Angel":
+    		return "blue"
+    	if self.name == "Gaby":
+    		return "darkseagreen"
