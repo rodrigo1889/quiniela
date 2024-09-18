@@ -20,41 +20,6 @@
             <section>
                 <h2> Probabilidad de victoria semanal </h2>
 
-                <div id="defunciones",style="background-color:#d3d3d3;">
-                    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
-                    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
-                    <script>
-                        d3.csv("https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/jhu/new_deaths_per_million.csv", function(err, rows){
-                            function unpack(rows, key) {
-                                return rows.map(function(row) { return row[key]; });
-                                }
-                                var data2 = {
-                                type: "bar",
-                                name: "Defunciones por millón de habitantes",
-                                x: unpack(rows,"date"),
-                                y: unpack(rows,"Mexico"),
-                                marker: {color:"#E37422"}
-                                }
-
-                                var data = [data2];
-
-                                var layout = {
-                                title: "Recopilación de JHU: Defunciones por millón de habitantes",
-                                yaxis: {
-                                    autorange: true,
-                                    },
-                                plot_bgcolor: "#C1C8E4",
-                                paper_bgcolor:"#C1C8E4",
-                                };
-
-                                Plotly.newPlot("defunciones", data, layout);
-                                })
-                    </script>
-                    
-                    
-                </div>
-            </section>
-
             
         </main>
         <footer class="footer">
