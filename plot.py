@@ -19,6 +19,10 @@ for name in data.index.to_numpy():
 		line=dict(color=plotter.Color_Picker(name).pick(),width=3),marker=dict(size=9)))
 fig.update_layout(title="Probabilidades de victoria en temporada regular",
 	template="plotly_dark",yaxis_title="% de 10 mil simulaciones ganadas")
-#fig.show()
+fig.show()
 print(plotly.offline.plot(fig,filename="winning_prob.html",include_plotlyjs=False,output_type="div"))
+
+
+
+
 
