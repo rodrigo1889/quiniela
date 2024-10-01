@@ -36,11 +36,11 @@ class Weekly:
 			return "darkseagreen"
 		elif name == "Pao":
 			return "cornflowerblue"
+		elif name == "Juan-Angel":
+			return "blue"
 		elif name == "Fer":
 			return "darkgoldenrod"
-        elif name == "Juan-Angel":
-            return "blue"
-	
+
 
 	def simple_plot(self,name: str):
 		color = self.obtain_color(name)
