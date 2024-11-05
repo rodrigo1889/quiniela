@@ -18,7 +18,7 @@ for name in data.index.to_numpy():
 	fig.add_trace(go.Scatter(x = data.T.index,y=data.T[name],name=name,line_shape="spline",
 		line=dict(color=plotter.Color_Picker(name).pick(),width=3),marker=dict(size=9)))
 fig.update_layout(title="Probabilidades de victoria en temporada regular",
-	template="plotly_dark",yaxis_title="% de 10 mil simulaciones ganadas")
+	template="plotly_dark",yaxis_title="% de 10 mil simulaciones ganadas",hovermode="x unified")
 fig.show()
 print(plotly.offline.plot(fig,filename="winning_prob.html",include_plotlyjs=False,output_type="div"))
 
