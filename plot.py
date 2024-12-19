@@ -1,7 +1,7 @@
 import numpy as np 
 import matplotlib.pyplot as plt 
 import pandas as pd 
-plt.style.use("style.mplstyle")
+#plt.style.use("style.mplstyle")
 import plotly.graph_objects as go
 import plotter 
 import plotly
